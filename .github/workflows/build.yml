@@ -1,4 +1,6 @@
-name: Build Lumen Player EXE
+- name: List files to debug
+      run: dir
+      name: Build Lumen Player EXE
 on: [push]
 
 jobs:
@@ -16,7 +18,7 @@ jobs:
       run: pip install pyinstaller ytmusicapi yt-dlp PyQt6 numpy scipy sounddevice soundfile
       
     - name: Compile to EXE
-      run: pyinstaller --noconsole --onefile --name "LumenPlayer" lumen player.py
+      run: pyinstaller --noconsole --onefile --name "LumenPlayer" player.py
       
     - name: Upload Final App
       uses: actions/upload-artifact@v4
