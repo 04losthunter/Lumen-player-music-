@@ -18,7 +18,7 @@ jobs:
       run: pip install pyinstaller ytmusicapi yt-dlp PyQt6 numpy scipy sounddevice soundfile
       
     - name: Compile to EXE
-      run: pyinstaller --noconsole --onefile --name "LumenPlayer" player.py
+      run: pyinstaller --noconsole --onefile --name "LumenPlayer" Lumen player.py
       
     - name: Upload Final App
       uses: actions/upload-artifact@v4
